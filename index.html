@@ -121,7 +121,7 @@ button:hover::after, button:focus::after {
   }
   100% {
     width: 300px;
-    height: 300px;
+    height: 250px;
     opacity: 0;
     z-index: 10;
   }
@@ -195,6 +195,8 @@ input[type=radio]:checked + label {
   
  
 }
+
+
 }
 
 @media screen and (max-width:350px) {
@@ -254,6 +256,8 @@ label {
 
     <textarea disabled type="text" id="r"   ></textarea>
 
+    
+
 <div class="wrap">
   <button class="button" onclick="getAndSetVal()">Générer</button>
 </div>
@@ -267,11 +271,7 @@ label {
         return Math.floor(Math.random() * (max - min + 1)) + min;
             }
 
-            function textSpeak(text){
-              responsiveVoice.speak(text)
-
-              
-            }
+           
         function getAndSetVal()
 
         
@@ -284,19 +284,25 @@ label {
              
                 if ( elts[0].checked === true ){
 
-                  var mots=["de pomme","de peche","de poire","d'abricot","va niquer ta mère sale pute"]
-                  var mots_un = mots[randint(0, (mots.length-1))]
+                  var n1=["débile","pas très gentil",]
+                  var mots_un = n1[randint(0, (n1.length-1))]
 
                   document.getElementById('r').value =mots_un ;
-                  textSpeak(mots_un)
+                 
                 
               }else if (elts[1].checked === true) {
 
-                document.getElementById('r').value ="lol 1" ;
+                var n2=["merde","enculer"]
+                  var mots_deux = n2[randint(0, (n2.length-1))]
+
+                  document.getElementById('r').value =mots_deux ;
                 
               } else {
 
-                document.getElementById('r').value ="lol 2" ;
+                  var n3=["Je vais t'enculer tellement fort, que celui qui arrivera a enlever ma bite de ton cul, on l'appellera le Roi Arthur !", 'Cave a sperme', 'Cuve a foutre']
+                  var mots_trois = n3[randint(0, (n3.length-1))]
+
+                  document.getElementById('r').value =mots_trois ;
                 
               }
 
@@ -327,6 +333,6 @@ label {
             }
           
     </script>
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=c0kicqnK"></script>
+    
 </body>
 </html>
