@@ -62,7 +62,7 @@ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 10
   outline: none;
   position: relative;
   padding: 10px;
-  margin:90px;
+  margin:75px;
   }
 
 button::before {
@@ -124,6 +124,48 @@ button:hover::after, button:focus::after {
   }
 }
 
+input[type=radio] {
+  
+  visibility: hidden;
+  display: none;
+  
+  
+}
+
+label {
+  color: #9a929e;
+  display: inline-block;
+  
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+  font-size:24px ;
+}
+
+input[type=radio]:checked + label {
+  color: #F6FBDD;
+  font-size:25px ;
+  background-color: tomato;
+  transition: 0.4s;
+ 
+}
+
+
+
+.radio-group {
+  
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  
+  
+  
+  
+}
+
+
+  
+
 @media screen and (max-width:450px) {
 
     textarea{
@@ -139,8 +181,71 @@ button:hover::after, button:focus::after {
         }
 
 
+        label {
+  
+  font-size:17px ;
 }
+
+input[type=radio]:checked + label {
+  
+  font-size:18px ;
+  
+ 
+}
+}
+
+@media screen and (max-width:350px) {
+
+  label {
+  
+  font-size:20px ;
+}
+
+input[type=radio]:checked + label {
+  
+  font-size:21px ;
+  
+ 
+}
+
+label {
+  
+  display: block;
+  
+  
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
     </style>
+
+
+
+
+<form>
+  <div class="radio-group">
+ <input type="radio" id="option-one" value=0 name="selector" checked>
+ <label for="option-one">Nivaeux 1</label>
+ <input type="radio" id="option-two" value=1 name="selector">
+ <label for="option-two">Nivaeux 2</label>
+ <input type="radio" id="option-three" value=2 name="selector">
+ <label for="option-three">Nivaeux 3</label>
+   </div>
+    </form>
 
 
 
@@ -163,8 +268,36 @@ button:hover::after, button:focus::after {
         
             //Utilisation
             {  
+
+              
+              var elts = document.querySelectorAll('input');
+
+             
+                if ( elts[0].checked === true ){
+
+                document.getElementById('r').value ="lol 0" ;
                 
-                var mots=["de pomme","de peche","de poire","d'abricot",]
+              }else if (elts[1].checked === true) {
+
+                document.getElementById('r').value ="lol 1" ;
+                
+              } else {
+
+                document.getElementById('r').value ="lol 2" ;
+                
+              }
+
+              
+              
+              
+              
+            
+
+              
+
+              
+                
+                /* var mots=["de pomme","de peche","de poire","d'abricot",]
                 var mots_fin=["une pomme","des pêches","une poire","une abricot"]
                 var verbe=["qui suce","qui mange","qui regarde","qui tue"]
                 var mots_un = mots[randint(0, (mots.length-1))]
@@ -175,7 +308,7 @@ button:hover::after, button:focus::after {
                 
             
                 
-                document.getElementById('r').value ="Espece "+mots_un+" "+verbe_un+" "+mots_fin_un+".";
+                document.getElementById('r').value ="Espece "+mots_un+" "+verbe_un+" "+mots_fin_un+".";*/ 
     
             
             }
