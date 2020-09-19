@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,9 @@
 
 
 <body>
+
+  
+  
     <style>
         *{
             margin:0px;
@@ -263,6 +266,12 @@ label {
             {
         return Math.floor(Math.random() * (max - min + 1)) + min;
             }
+
+            function textSpeak(text){
+              responsiveVoice.speak(text)
+
+              
+            }
         function getAndSetVal()
 
         
@@ -275,7 +284,11 @@ label {
              
                 if ( elts[0].checked === true ){
 
-                document.getElementById('r').value ="lol 0" ;
+                  var mots=["de pomme","de peche","de poire","d'abricot",]
+                  var mots_un = mots[randint(0, (mots.length-1))]
+
+                  document.getElementById('r').value =mots_un ;
+                  textSpeak(mots_un)
                 
               }else if (elts[1].checked === true) {
 
@@ -314,5 +327,6 @@ label {
             }
           
     </script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=c0kicqnK"></script>
 </body>
 </html>
