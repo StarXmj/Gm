@@ -284,23 +284,36 @@ label {
              
                 if ( elts[0].checked === true ){
 
-                  var n1=["débile","pas très gentil",]
+                  var n1=["débile","pas très gentil","patate","tête de têtard","banane","mauviette","goujat","malotru","trou duc",
+                          "raclure de bidet","balai à chiotte","fumier","ordure","pourriture","moisissure","moule à gaufre","escogriffe",
+                          "saltimbanque","branquignole","gougnafier","Frippon","Pignouf"]
                   var mots_un = n1[randint(0, (n1.length-1))]
+                  console.log("n1 "+n1.length);
 
                   document.getElementById('r').value =mots_un ;
                  
                 
               }else if (elts[1].checked === true) {
 
-                var n2=["merde","enculer"]
+                var n2=["enculer","Puterelle","Butor","enfoiré","je n'ai pas envie de t'insulter, j'ai peur de salir l'insulte",
+                "au niveau bagage intellectuel, tu voyages léger","Fils de pute","Sac à merde","Bâtard"]
+                ///"0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0",
+
                   var mots_deux = n2[randint(0, (n2.length-1))]
+                  console.log("n2 "+n2.length);
 
                   document.getElementById('r').value =mots_deux ;
                 
               } else {
 
-                  var n3=["Je vais t'enculer tellement fort, que celui qui arrivera a enlever ma bite de ton cul, on l'appellera le Roi Arthur !", 'Cave a sperme', 'Cuve a foutre']
+                  var n3=["Je vais t'enculer tellement fort, que celui qui arrivera a enlever ma bite de ton cul, on l'appellera le Roi Arthur !",
+                   'Cave a sperme', 'Cuve a foutre',"Dieu a gâché un bon trou du cul quand il a mis des dents dans ta bouche",
+                   "En voulant récupérer un papier, j'ai retrouvé ta dignité dans la poubelle. J'imagine que tu n'en auras pas besoin",
+                   "Moi j’aime beaucoup le port du masque, ça camoufle les effluves de pourriture qui émanent de ta bouche dès que tu ouvres ta gueule",
+                   "Si les rues étaient pavé de bite tu marcherais sur le cul"
+]
                   var mots_trois = n3[randint(0, (n3.length-1))]
+                  console.log("n3 "+n3.length);
 
                   document.getElementById('r').value =mots_trois ;
                 
