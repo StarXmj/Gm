@@ -68,10 +68,10 @@ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 10
   margin:75px;
   }
 
-button::before {
-content: '';
+button :hover {
+
   border-radius: 1000px;
-  
+  background-color: thistle;
   
   box-shadow: 0 0 60px rgba(0,255,203,.64);
   position: absolute;
@@ -93,39 +93,8 @@ button:hover::before, button:focus::before {
   
 }
 
-button::after {
-  content: '';
-  width: 30px; height: 30px;
-  border-radius: 100%;
-  border: 6px solid #00FFCB;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
-}
 
-button:hover::after, button:focus::after {
-  animation: none;
-  display: none;
-  
-}
 
-@keyframes ring {
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 1;
-   
-  }
-  100% {
-    width: 300px;
-    height: 250px;
-    opacity: 0;
-    z-index: 10;
-  }
-}
 
 input[type=radio] {
   
@@ -186,6 +155,13 @@ label {
   
 }
 
+.v{
+
+  text-align: center;
+  margin-top: -50px;
+  color: white;
+}
+
 
   
 
@@ -219,7 +195,7 @@ input[type=radio]:checked + label {
 
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:380px) {
 
   label {
   
@@ -280,7 +256,10 @@ label {
 
 <div class="wrap">
   <button class="button" onclick="getAndSetVal()">Générer</button>
+  
 </div>
+<p class="v">Version 1.0</p>
+
 
 
 
@@ -306,7 +285,21 @@ label {
 
                   var n1=["débile","pas très gentil","patate","tête de têtard","banane","mauviette","goujat","malotru","trou duc",
                           "raclure de bidet","balai à chiotte","fumier","ordure","pourriture","moisissure","moule à gaufre","escogriffe",
-                          "saltimbanque","branquignole","gougnafier","Frippon","Pignouf"]
+                          "saltimbanque","branquignole","gougnafier","Frippon","Pignouf",'abruti', 'andouille', 'assimilé', 'astèque',
+                           'avorton', 'baleine', 'bande d’abrutis', 'baudet', 'beauf', 'bellicole', 'bête', 'bête à pleurer',
+                          'bête comme ses pieds', 'bête comme un chou', 'bête comme un cochon', 'bic', 'bicot', 'bicotte', 'bite',
+                          'bitembois', 'bordille', 'boucaque', 'boudin', 'bouffi', 'bouffon', 'bougnoul', 'bougnoule', 'Bougnoulie',
+                          'bougnoulisation', 'bougnouliser', 'bougre', 'boukak', 'boulet', 'bounioul', 'bounioule', 'bourdille', 
+                          'bourricot', 'branleur', 'bridé', 'bridée', 'brigand', 'brise-burnes', 'cacou', 'cafre', 'cageot',
+                          'caldoche', 'casse-bonbon', 'casse-couilles', 'cave', 'chagasse', 'charlot de vogue', 'chauffard',
+                          'chbeb', 'chien de chrétien', 'chiennasse', 'chier', 'chinetoc', 'chinetoque', 'chintok', 'chleuh',
+                          'chnoque', 'citrouille', 'coche', 'colon', 'con', 'con comme la lune', 'con comme ses pieds',
+                          'con comme un balai', 'con comme un manche', 'con comme une chaise', 'con comme une valise sans poignée',
+                          'conchier', 'counifle', 'courtaud', 'CPF', 'crétin', 'crevure', 'cricri', 'crotté', 'crouillat', 'crouille',
+                          'croûton', 'débile', 'doryphore', 'doxosophe', 'doxosophie', 'drouille', 'ducon', 'duconnot', 'dugenoux',
+                          'dugland', 'duschnock', 'emmanché', 'emmerder', 'emmerdeur', 'emmerdeuse', 'empafé', 'empapaouté', 'épais',
+                          'espèce de espingoin', 'étron', 'face de chien', 'face de craie', 'face de pet', 'face de rat', 'fachiste',
+                          'fermer sa gueule', 'fils de bâtard', 'fiotte', 'folle', 'fouteur', 'fripouille', 'frisé', 'fritz', 'fumier', 'garce']
                   var mots_un = n1[randint(0, (n1.length-1))]
                   console.log("n1 "+n1.length);
 
