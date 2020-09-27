@@ -65,7 +65,8 @@ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 10
   outline: none;
   position: relative;
   padding: 10px;
-  margin:75px;
+  margin:65px;
+  z-index: 10;
   }
 
 button :hover {
@@ -102,11 +103,13 @@ input[type=radio] {
   display: none;
   
   
+  
 }
 
 label {
   color: #9a929e;
   display: inline-block;
+  
   
   cursor: pointer;
   font-weight: bold;
@@ -149,6 +152,7 @@ label {
   display: inline-block;
   width: 100%;
   text-align: center;
+  z-index: 10;
   
   
   
@@ -160,6 +164,50 @@ label {
   text-align: center;
   margin-top: -50px;
   color: white;
+  position: static;
+  z-index: 10;
+  
+  
+}
+
+.boite{
+  margin: 40px auto;
+  text-align: center;
+  display: block;
+  position: relative;
+  width: 10%;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  box-shadow: black 0px 5px 5px 3px;
+  color: white;
+  text-decoration:none;
+  font-family: 'Nunito', sans-serif;
+
+ 
+  
+  
+}
+
+.boite:hover{
+  
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  box-shadow: black 0px 4px 4px 2px;
+ 
+  color: #D52EFD;
+  text-decoration:none;
+  transition-duration: 0.7s;
+}
+
+.buttonegg{
+  
+  text-decoration: none;
+  position: absolute;
+  border: 0px solid #000;
+  /*background-color:#3a39391a;*/
+ color: #e7e3e302;
+ 
+
 }
 
 
@@ -237,7 +285,7 @@ label {
 
 
 
-<form>
+<form class="egg">
   <div class="radio-group">
  <input type="radio" id="option-one" value=0 name="selector" checked>
  <label for="option-one">Niveaux 1</label>
@@ -256,25 +304,118 @@ label {
 
 <div class="wrap">
   <button class="button" onclick="getAndSetVal()">Générer</button>
+  <button id="buttonegg" onclick="onClick()">N 1</button>
+  <button id="buttonegg1" onclick="onClick1()">N 2</button>
+  <button id="buttonegg2" onclick="onClick2()">N 3</button>
   
 </div>
 <p class="v">Version 1.1</p>
 
 
 
+<!--<a class="boite" href="boite.html">Boîte à Insulte</a> -->
+
+
+
 
 
     <script>
-            function randint(min, max)
-            {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
+      
+      
 
+          function randint(min, max)
+                      {
+                  return Math.floor(Math.random() * (max - min + 1)) + min;
+                      }
+                      
+          
+          pos_x = randint(0, 98)
+          pos_y = randint(100,520)
+
+
+          
+
+          var b = document.getElementById("buttonegg");
+          b.style.zIndex = '1'; 
+          b.style.position = 'absolute';  
+          b.style.left =randint(0, 98)+'%';
+          b.style.top= randint(100,520)+'px';
+          b.style.color="#3a39391b";
+          b.style.background="#303033";
+          b.style.border= "0px solid #000";
+
+          var c = document.getElementById("buttonegg1");
+          c.style.zIndex = '1'; 
+          c.style.position = 'absolute';  
+          c.style.left =randint(0, 98)+'%';
+          c.style.top= randint(100,520)+'px';
+          c.style.color="#3a39391b";
+          c.style.background="#303033";
+          c.style.border= "0px solid #000";
+
+          var d = document.getElementById("buttonegg2");
+          d.style.zIndex = '1'; 
+          d.style.position = 'absolute';  
+          d.style.left =randint(0, 98)+'%';
+          d.style.top= randint(100,520)+'px';
+          d.style.color="#3a39391b";
+          d.style.background="#303033";
+          d.style.border= "0px solid #000";
+          
+          
+          
+          
+          
+          
+                  
+          var clicks = [];
+          var list1 = ["a","b","c"] ;
+          var list=[];
+          for (const x of Array(randint(5, 10)).keys()) {
+          list.push(list1[randint(0, (list1.length-1))]);}
+          console.log(list);
+
+
+          function onClick() {
+            clicks.push("a");
+            if(JSON.stringify(clicks)==JSON.stringify(list)) {
+            document.getElementById('r').value ="Bravo";
+            window.location.href="easteregg.html"
+            
+            console.log("bravo");
+            }
+            console.log(clicks);}
+            function onClick1() {
+            clicks.push("b");
+            if(JSON.stringify(clicks)==JSON.stringify(list)) {
+            document.getElementById('r').value ="Bravo";
+            window.location.href="easteregg.html"
+            console.log("bravo")
+            }
+            console.log(clicks);}
+            function onClick2() {
+            clicks.push("c");
+            if(JSON.stringify(clicks)==JSON.stringify(list)) {
+            document.getElementById('r').value ="Bravo";
+            window.location.href="easteregg.html"
+            console.log("bravo")
+            }
+            console.log(clicks);}
+            
+          
+          
+          
+         
+
+
+          
+
+           
            
         function getAndSetVal()
 
         
-            //Utilisation
+            //Utilisation#3a39391a
             {  
 
               
